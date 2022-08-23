@@ -61,11 +61,11 @@ def get_player_statistics(events):
     player_stats['fraction_of_total_goals_scored'] = player_stats['goals_scored'] / player_stats['total_match_goals']
     player_stats['stat_id'] = player_stats.index
 
-    player_stats_df = player_stats[['stat_id', 'player_id', 'match_id', 'goals_scored',
+    player_stats = player_stats[['stat_id', 'player_id', 'match_id', 'goals_scored',
                                     'minutes_played', 'fraction_of_total_minutes_played',
                                     'fraction_of_total_goals_scored']]
     print('Player Statistics DataFrame created')
-    return player_stats_df
+    return player_stats
 
 
 def get_match_goals(events):
